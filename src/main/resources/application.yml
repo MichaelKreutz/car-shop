@@ -1,0 +1,16 @@
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/car
+    username: zyres
+    password: zyres
+    platform: postgres
+  # The SQL dialect makes Hibernate generate better SQL for the chosen database
+  jpa:
+    properties.hibernate.dialect: org.hibernate.dialect.PostgreSQL95Dialect
+    # Hibernate ddl auto (create, create-drop, validate, update)
+    hibernate.ddl-auto: update
+    database: postgresql
+    properties:
+      hibernate.jdbc.lob.non_contextual_creation: true
